@@ -27,17 +27,18 @@ public class CategoryTest {
 		
 		ctx.refresh();
 		
-		categoryDAO=(CategoryDAO)ctx.getBean("CategoryDAO");
+		categoryDAO=(CategoryDAO)ctx.getBean("categoryDAO");
 	}
 	
 	@Test
 	public  void testAddCategory() 
 	{
 		category = new Category();
-		category.setId(1);
+		//category.setId(1);
 		category.setName("Cake");
 		category.setDescription("This cake is delicious");
 		category.setImageUrl("1.jpg");
+		category.setActive(true);
 	
 	assertEquals("category added successfully",true,categoryDAO.add(category));
 	}

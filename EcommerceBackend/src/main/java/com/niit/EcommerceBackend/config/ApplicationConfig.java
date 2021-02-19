@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class ApplicationConfig {
 
-private static final String DRIVER_NAME="org.h2.Drive";
+private static final String DRIVER_NAME="org.h2.Driver";
 private static final String DATABASE_URL="jdbc:h2:tcp://localhost/~/test";
 private static final String USER_NAME="sa";
 private static final String PASSWORD="sa";
@@ -50,9 +50,9 @@ return builder.buildSessionFactory();
 private Properties getHibernateProperties() {
 Properties properties = new Properties();
 properties.put("hibernate.show_sql", "true");
-properties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
+properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 properties.put("hibernate.format_sql", "true");
-properties.put("hibernate.hbm2ddl.auto", "create");
+//properties.put("hibernate.hbm2ddl.auto", "create");
 return properties;
 }
 

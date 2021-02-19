@@ -14,8 +14,10 @@ public class Category {
 	private int id;
 	private String name;
 	private String description;
+	
 	@Column(name="image_url")
 	private String imageUrl;
+	
 	@Column(name="is_active")
 	private boolean active=true;
 	

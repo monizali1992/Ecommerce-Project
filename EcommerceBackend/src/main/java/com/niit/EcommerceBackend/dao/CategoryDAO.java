@@ -8,10 +8,16 @@ public interface CategoryDAO {
 	
 //business logic method
 	
-	List <Category> lists();
+	List<Category> lists();
 	
 	Category get(int id);
+	
 	boolean add(Category category);
+	
+	boolean update(Category category);
+	
+	boolean delete(Category category);
+	
 	
 	
 }
